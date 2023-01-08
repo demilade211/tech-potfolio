@@ -1,38 +1,337 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 1;
+    transition: height .10s ease;
+   
+}
+.logo h1{
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+}
+.d-nav ul li{
+    list-style-type: none;
+    display: inline-flex;
+    line-height: 3.5em;
+}
+.d-nav ul li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+}
+.list:hover{
+    border-bottom: 1px solid white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*styling for hamburger icon*/
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+/*styling for hamburger icon ends*/
+.m-nav{
+    display: none;
+}
+.hero{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: url("/public/img/IMG_8492.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*styling for Dark cover*/
+.hero::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+}
+/*styling for Dark cover ends*/
+.in-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: 575px;
+    z-index: 1;
+}
+.h-border{
+    width: inherit;
+    height: auto;
+    z-index: 1;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.hero-text h1{
+    text-align: center;
+    color: white;
+    font-size: 7vmin;
+}
+.hero-text h1 a{
+    color: white;
+    text-decoration: none;
+}
+#btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+#btn:hover{
+    background: none;
+    color: white;
+    border: 1px solid white;
+}
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+}
+section{
+    width: 100%;
+    height: auto;
+    padding: 100px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.skill-cards{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.card{
+    width: 245.6px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px;
+}
+.image{
+    width: 100%;
+    height: 270px;
+    margin-bottom: 10px;
+    background-size: cover;
+}
+.card-title{
+    text-align: center;
+}
+.in-sec{
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.p-image{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 300px;
+    padding: 20px;
+
+}
+.image-box1{
+    width: 70%;
+    height: 215px;
+    background-image: url("/public/img/udemy clone-e.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.image-box2{
+    width: 70%;
+    height: 215px;
+    background-image: url("/public/img/self assesment-e.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.image-box3{
+    width: 70%;
+    height: 215px;
+    background-image: url("/public/img/Rando-e.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.description{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.in-desc{
+    margin: 10px;
+}
+#p-btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+#p-btn:hover{
+    background-color: white;
+    color: black;
+}
+.c-container{
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+.contact-card{
+    background-color: white;
+    width: 290px;
+    height: 330px;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 0px 1px 18px #888888;
+}
+#c-btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color:  #00b33c;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+#c-btn:hover{
+    background-color: white;
+    color: #00b33c;
+    border: 1px solid  #00b33c;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Styling for Scrolling effects*/
+.scroll-active{
+    background-color:rgba(0,0,0,.6) ;
+}
+.scroll-active header{
+    height: 100px;
+}
+/* Styling for Scrolling effects ends*/
+@media screen and (max-width: 1000px) {
+    header{
+        justify-content: space-between;
+    }
+    .d-nav-con{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .in-sec{
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-cards{
+        align-items: center;
+        flex-direction: column;
+    }
+    .image-box1{
+        width: 100%;
+        height: 250px;
+        background-size: 100% 100%;
+    }
+    .image-box2{
+        width: 100%;
+        height: 250px;
+        background-size: 100% 100%;
+    }
+    .image-box3{
+        width: 100%;
+        height: 250px;
+        background-size: 100% 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .hero-text h1{
+        font-size: 5vmin;
+    }
+    .p-image{
+        width: 100%;
+    }
+    .description{
+        width: 100%;
+    }
+    .image-box{
+        width: 100%;
+        height: 250px;
+        background-size: 100% 100%;
+    }
+    .c-container{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
